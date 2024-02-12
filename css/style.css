@@ -1,0 +1,127 @@
+body {
+    
+    background-color: #1eac7c;
+    color: #fff;
+    
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.255);
+}
+.flex-container > div {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.flex-container > div > div{
+    margin-bottom: 10%;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+}
+.profile > div {
+    width: 100%;
+    height: 100%; /* Ensures the height adjusts based on the image's aspect ratio */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+}
+.profile > div > p {
+    font-size: 15px ;
+    text-align: left;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.profile img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#profileText{
+    margin-left: 10%;
+}
+
+.showcase > div {
+    width: 100%;
+    height: 100%; /* Ensures the height adjusts based on the image's aspect ratio */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.showcase img {
+    max-width: 30%;
+    max-height: 30%;
+    margin: 1%;
+}
+
+.life{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; /* Centers the image horizontally */
+    
+}
+.life > div {
+    width: 100%;
+    height: 100%; /* Ensures the height adjusts based on the image's aspect ratio */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.life > div > p {
+    font-size: 15px ;
+    text-align: left;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.life img{
+    max-width: 25%;
+    max-height: 25%;
+    margin: 5%;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.559);
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+   
+}
+.footer a {
+    color: white;
+}
+
+@media screen and (max-width: 961px) {
+    .profile {
+        flex-wrap: wrap-reverse;
+    }
+    #profileText{
+        margin-right: 10%;
+    }
+    .showcase img {
+    max-width: 40%;
+    max-height: 40%;
+    margin: 1%;
+}
+    .life{
+        flex-wrap: wrap;
+    }
+    
+}
