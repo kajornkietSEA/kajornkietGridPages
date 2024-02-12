@@ -119,9 +119,18 @@ body {
     max-width: 40%;
     max-height: 40%;
     margin: 1%;
-}
+    }
     .life{
         flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 481px) {
+    .showcase img {
+    max-width: 70%;
+    max-height: 70%;
+    margin: 1%;
     }
     
 }
