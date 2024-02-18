@@ -1,37 +1,81 @@
 body {
-    
+    display: grid;
+    grid-template-columns: 1fr minmax(250px, auto) 1fr;
+    grid-template-rows: 10vh auto 25vh;
+    grid-template-areas:
+    "head head head"
+    "main main main"
+    "foot foot foot"
+    ;
+
     background-color: #1eac7c;
     color: #fff;
-    
   }
 
-.flex-container {
+
+.header{
+    margin-right: 10%;
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 10vh;
+    grid-template-areas:
+    "logo menu menu"
+}
+.header > h1{
+    grid-area: logo;
+    margin-top: 0;
+}
+.menu{
+    grid-area: menu;
+    display: flex;
+    
+}
+.menu > div{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-top: auto;  
+    
+}
+.menu > div > a{
+    color: #fff; 
+    padding: 1% 2% 1% 5%;
+}
+
+/*.flex-container {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 3%;
+    
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 2%;
     background-color: rgba(0, 0, 0, 0.255);
 }
 .flex-container > div {
     width: 100%;
     height: 100%;
     margin-top: 5%;
-    margin-bottom: 10%;
+
     text-align: center;
 }
-.flex-container > div > div{
-    margin-bottom: 10%;
-}
 
+*/
 .profile{
+    
+    grid-area: main;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
+    background-color: rgba(0, 0, 0, 0.255);
 }
 .profile > div {
     width: 100%;
@@ -50,10 +94,34 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
+#T1{
+    font-size: 20px;
+    font-weight: bold;
+}
+#T2{
+    font-size: 38px; 
+    font-weight: bold;
+}
 #profileText{
     margin-left: 10%;
+    margin-top: 10%;
+}
+#profile-img{
+    display: flex;
 }
 
+.showcase{
+    grid-area: main;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    background-color: rgba(0, 0, 0, 0.255);
+}
 .showcase > div {
     width: 100%;
     height: 100%; /* Ensures the height adjusts based on the image's aspect ratio */
@@ -62,6 +130,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 3%;
 }
 .showcase img {
     max-width: 30%;
@@ -70,21 +139,28 @@ body {
 }
 
 .life{
+    grid-area: main;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center; /* Centers the image horizontally */
-    
+    align-items: center; /* Centers the image vertically */
+    background-color: rgba(0, 0, 0, 0.255);
 }
 .life > div {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%; /* Ensures the height adjusts based on the image's aspect ratio */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
+   align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 3%;
 }
-.life > div > p {
+.life > div > div > p {
     font-size: 15px ;
     text-align: left;
     line-height: 1.6;
@@ -97,12 +173,18 @@ body {
     margin: 5%;
 }
 
+
 .footer{
+    grid-area: foot;
     background-color: rgba(0, 0, 0, 0.559);
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    
    
+}
+.footer p{
+    margin: 0;
+    padding-bottom: 1px;
 }
 .footer a {
     color: white;
@@ -112,17 +194,32 @@ body {
     .profile {
         flex-wrap: wrap-reverse;
     }
+    .profile > div{
+        max-height: 50%;
+    }
     #profileText{
-        margin-right: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        
     }
     .showcase img {
     max-width: 40%;
     max-height: 40%;
     margin: 1%;
     }
+
     .life{
         flex-wrap: wrap;
+
     }
+    .life > div {
+        height: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+      
     
 }
 
